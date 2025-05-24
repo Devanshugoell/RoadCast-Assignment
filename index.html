@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>RoadCast Assignment</title>
+  </head>
+  <body>
+    <section
+      class="w-[80%] m-auto bg-cover bg-center bg-no-repeat"
+      style="background-image: url('Assets/Decore.png')"
+    >
+      <!-- Header  -->
+      <header class="w-[80%] m-auto">
+        <nav class="flex my-10 items-center justify-between">
+          <img src="Assets/Logo.png" alt="Logo of Website" />
+          <ul class="flex gap-16 items-center justify-center font-opensans">
+            <li>Destinations</li>
+            <li>Hotel</li>
+            <li>Flights</li>
+            <li>Booking</li>
+            <li>Login</li>
+            <button class="border border-black rounded-[5px] text-sm py-1 px-2">
+              Sign Up
+            </button>
+            <select name="language" class="bg-transparent">
+              <option value="eng">EN</option>
+              <option value="japnese">JAP</option>
+            </select>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hero section   -->
+
+      <section class="w-[80%] mx-auto my-9 flex items-center justify-center">
+        <!-- === Left Side Content (Text) === -->
+        <section class="w-[48%] flex justify-center flex-col gap-5">
+          <!-- Highlighted Tagline -->
+          <p class="text-lg font-bold text-orange-600">
+            BEST DESTINATIONS AROUND THE WORLD
+          </p>
+
+          <!-- Main Heading -->
+          <h1 class="text-7xl font-bold">
+            Travel,enjoy and live a new and full life
+          </h1>
+
+          <!-- Description Paragraph -->
+          <p class="my-2 text-lg">
+            Built Wicket longer admire do barton vanity itself do in it.
+            Preferred to sportsmen it engrossed listening. Park gate sell they
+            west hard for the.
+          </p>
+
+          <!-- CTA Buttons and Play Demo -->
+          <section class="flex items-center gap-10">
+            <!-- 'Find Out More' Button -->
+            <button
+              class="p-4 bg-yellow-500 border border-yellow-200 text-white rounded-md"
+            >
+              Find out more
+            </button>
+
+            <!-- Play Demo Section -->
+            <section class="flex items-center gap-4">
+              <!-- Play Button with Round Background -->
+              <section class="relative inline-block">
+                <img
+                  src="./Assets/round.png"
+                  alt="Round image"
+                  class="w-30 h-30"
+                />
+                <img
+                  src="./Assets/Triangle.png"
+                  alt="Triangle image"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 z-10"
+                />
+              </section>
+
+              <!-- Play Demo Text -->
+              <p>Play demo</p>
+            </section>
+          </section>
+        </section>
+
+        <!-- === Right Side Content (Image) === -->
+        <section>
+          <img src="Assets/Image.png" alt="image of a girl Travelling" />
+        </section>
+      </section>
+    </section>
+  </body>
+</html>
