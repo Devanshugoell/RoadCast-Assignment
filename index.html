@@ -296,22 +296,64 @@
       </section>
     </section>
 
-    <!-- Testimonials  -->
+    <!-- Testimonials -->
+    <section class="w-[80%] flex mx-auto justify-between mt-20 gap-20">
+      <!-- Top Text -->
+      <section class="flex items-start flex-col gap-16">
+        <!-- Left Side content (Text) -->
+        <section class="flex flex-col gap-3">
+          <p class="text-lg font-bold text-gray-500">TESTIMONIALS</p>
+          <h2 class="text-6xl font-bold">What People Say About Us.</h2>
+        </section>
 
-    <section class="w-[80%] mx-auto flex justify-between gap-10">
-      <!-- Left Side content (Text)   -->
+        <!-- Radio Buttons -->
 
-      <section class="flex flex-col gap-3">
-        <p class="text-lg text-gray-500">TESTIMONIALS</p>
-
-        <h2 class="text-6xl font-bold">What People Say About Us.</h2>
+        <section class="flex justify-center gap-4 mt-6">
+          <button
+            id="Testimonial-0"
+            class="w-4 h-4 bg-gray-300 rounded-full hover:bg-gray-500"
+            onclick="goToSlide(0)"
+          ></button>
+          <button
+            id="Testimonial-1"
+            class="w-4 h-4 bg-gray-300 rounded-full hover:bg-gray-500"
+            onclick="goToSlide(1)"
+          ></button>
+          <button
+            id="Testimonial-2"
+            class="w-4 h-4 bg-gray-300 rounded-full hover:bg-gray-500"
+            onclick="goToSlide(2)"
+          ></button>
+        </section>
       </section>
 
-      <!-- Right Side content (Image) -->
-
-      <section>
-        <img src="Assets/Testimonials.png" alt="Testimonials Image" />
-      </section>
+      <!-- Image Slider -->
+      <div class="relative w-full overflow-hidden rounded-lg">
+        <!-- Slider Images Wrapper -->
+        <div
+          id="slider"
+          class="flex transition-transform duration-500 ease-in-out"
+          style="transform: translateX(0%)"
+        >
+          <img
+            src="Assets/Testimonials.png"
+            alt="Testimonial 1"
+            class="w-full flex-shrink-0"
+          />
+          <img
+            src="Assets/Testimonials.png"
+            alt="Testimonial 2"
+            class="w-full flex-shrink-0"
+          />
+          <img
+            src="Assets/Testimonials.png"
+            alt="Testimonial 3"
+            class="w-full flex-shrink-0"
+          />
+        </div>
+      </div>
     </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
