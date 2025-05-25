@@ -379,27 +379,35 @@
     <!-- Subscription of news letter -->
 
     <section
-      class="w-[80%] flex mx-auto justify-center items-center my-10 relative"
+      class="w-[80%] mx-auto my-10 relative flex justify-center items-center px-4"
     >
       <!-- Background Image -->
-      <img src="Assets/SubsciptionRectangle.png" class="w-full" />
+      <img
+        src="Assets/SubsciptionRectangle.png"
+        class="w-full object-cover"
+        alt="Background"
+      />
 
       <!-- Content Positioned on Top -->
       <section
-        class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-8 text-center z-10 gap-10"
+        class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center z-10 gap-8 px-4"
       >
-        <p class="text-4xl font-bold max-w-3xl text-gray-600">
+        <p
+          class="text-2xl sm:text-xl md:text-3xl font-bold max-w-3xl text-gray-600"
+        >
           Subscribe to get information, latest news and other interesting offers
           about Jadoo
         </p>
-        <section class="flex gap-4 mt-6">
+
+        <!-- Input & Button -->
+        <section class="flex flex-col sm:flex-row gap-4 mt-4 w-full max-w-md">
           <input
             type="text"
             placeholder="Your Email"
-            class="rounded-lg p-4 pl-6 w-64 text-black"
+            class="rounded-lg p-4 pl-6 text-black w-full sm:w-[60%] flex-1"
           />
           <button
-            class="bg-orange-500 text-white font-bold px-6 py-4 rounded-lg"
+            class="bg-orange-500 text-white font-bold px-6 py-4 rounded-lg w-full sm:w-auto"
           >
             Subscribe
           </button>
@@ -409,43 +417,55 @@
       <!-- Arrow Image -->
       <img
         src="Assets/ArowImage.png"
-        alt=""
-        class="absolute -top-4 -right-4 z-20"
+        alt="Arrow"
+        class="absolute right-2 top-2 sm:-top-4 sm:-right-4 w-10 sm:w-auto z-20"
       />
     </section>
 
     <!-- Footer  -->
 
-    <footer class="w-[80%] mx-auto">
-      <section class="flex justify-between my-20">
-        <section class="w-[20%]">
+    <footer class="w-[80%] mx-auto px-4">
+      <!-- Main section -->
+      <section
+        class="flex flex-col gap-12 md:flex-row md:justify-between my-20"
+      >
+        <!-- Logo and text -->
+        <section class="md:w-[25%]">
           <img src="Assets/FooterLogo.png" alt="Footer Logo" class="mb-6" />
           <p class="text-gray-600">
             Book your trip in minute, get full Control for much longer.
           </p>
         </section>
 
-        <section class="flex justify-between w-[30%]">
-          <section class="flex gap-2 flex-col">
-            <p class="font-bold mb-4">Company</p>
+        <!-- Links -->
+        <section
+          class="flex flex-col gap-8 sm:flex-row sm:justify-between md:w-[40%]"
+        >
+          <!-- Column 1 -->
+          <section class="flex flex-col gap-2">
+            <p class="font-bold mb-2">Company</p>
             <p>About</p>
             <p>Careers</p>
             <p>Mobile</p>
           </section>
-          <section class="flex gap-2 flex-col">
-            <p class="font-bold mb-4">Contact</p>
+          <!-- Column 2 -->
+          <section class="flex flex-col gap-2">
+            <p class="font-bold mb-2">Contact</p>
             <p>Help/FAQ</p>
             <p>Press</p>
-            <p>Affilates</p>
+            <p>Affiliates</p>
           </section>
-          <section class="flex gap-2 flex-col">
-            <p class="font-bold mb-4">More</p>
+          <!-- Column 3 -->
+          <section class="flex flex-col gap-2">
+            <p class="font-bold mb-2">More</p>
             <p>Airlinefees</p>
             <p>Airline</p>
             <p>Low fare tips</p>
           </section>
         </section>
-        <section class="w-[30%] space-y-4">
+
+        <!-- Social & Apps -->
+        <section class="md:w-[30%] space-y-4">
           <!-- Social Icons -->
           <section class="flex gap-3">
             <img src="Assets/FacebookLogo.png" alt="FacebookLogo" />
@@ -453,12 +473,11 @@
             <img src="Assets/TwitterLogo.png" alt="TwitterLogo" />
           </section>
 
-          <!-- Text -->
           <p class="text-lg text-gray-600 font-semibold">Discover our app</p>
 
-          <!-- App Store Buttons -->
-          <section class="flex gap-4">
-            <!-- Google Play Button 1 -->
+          <!-- Store Buttons -->
+          <section class="flex flex-col sm:flex-row gap-4">
+            <!-- Google Play -->
             <section
               class="bg-black rounded-2xl flex items-center px-3 py-2 gap-2 w-fit"
             >
@@ -469,7 +488,7 @@
               </section>
             </section>
 
-            <!-- Google Play Button 2 -->
+            <!-- Apple Store -->
             <section
               class="bg-black rounded-2xl flex items-center px-3 py-2 gap-2 w-fit"
             >
@@ -483,9 +502,10 @@
         </section>
       </section>
 
+      <!-- Bottom copyright -->
       <section>
         <p class="text-center my-4 font-bold text-gray-600">
-          All rights reserved@jadoo.co
+          All rights reserved @jadoo.co
         </p>
       </section>
     </footer>
