@@ -1,3 +1,6 @@
+const toggleBtn = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
 let currentSlide = 0;
 const totalSlides = 3;
 
@@ -26,3 +29,7 @@ setInterval(() => {
   currentSlide = (currentSlide + 1) % totalSlides;
   goToSlide(currentSlide);
 }, 1500);
+
+toggleBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("hidden");
+});

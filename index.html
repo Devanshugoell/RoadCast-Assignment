@@ -20,21 +20,44 @@
   </head>
   <body>
     <!-- Header  -->
-    <header class="w-[80%] m-auto">
-      <nav class="flex my-10 items-center justify-between">
+    <header class="w-[80%] mx-auto">
+      <nav class="flex my-10 items-center justify-between relative">
+        <!-- Logo -->
         <a href="/">
           <img src="Assets/Logo.png" alt="Logo of Website" />
         </a>
-        <ul class="flex gap-16 items-center justify-center font-opensans">
-          <li class="cursor-pointer">Destinations</li>
-          <li class="cursor-pointer">Hotel</li>
-          <li class="cursor-pointer">Flights</li>
-          <li class="cursor-pointer">Booking</li>
-          <li class="cursor-pointer">Login</li>
-          <button class="border border-black rounded-[5px] text-sm py-1 px-2">
+
+        <!-- Hamburger Menu for Mobile -->
+        <button id="menu-toggle" class="lg:hidden block focus:outline-none">
+          <img
+            src="Assets/HamburgerMenu.png"
+            alt="HamburgerMenu"
+            class="w-6 h-6"
+          />
+        </button>
+
+        <!-- Navigation Links -->
+        <ul
+          id="nav-links"
+          class="hidden lg:flex flex-col lg:flex-row items-center gap-6 lg:gap-8 xl:gap-16 py-6 lg:py-0 text-center absolute lg:static top-full right-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none px-4 lg:px-0 z-50"
+        >
+          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">
+            Destinations
+          </li>
+          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">Hotel</li>
+          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">
+            Flights
+          </li>
+          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">
+            Booking
+          </li>
+          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">Login</li>
+          <button
+            class="border border-black rounded-[5px] text-sm py-1 px-2 lg:ml-4 hover:bg-black hover:text-white transition-colors"
+          >
             Sign Up
           </button>
-          <select name="language" class="bg-transparent">
+          <select name="language" class="bg-transparent focus:outline-none">
             <option value="eng">EN</option>
             <option value="japnese">JAP</option>
           </select>
@@ -44,31 +67,37 @@
 
     <!-- Hero section   -->
 
-    <section class="w-[80%] mx-auto my-9 flex items-center justify-center">
+    <section
+      class="w-[80%] mx-auto my-9 flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
+    >
       <!-- === Left Side Content (Text) === -->
-      <section class="w-[48%] flex justify-center flex-col gap-5">
+      <section
+        class="w-full lg:w-1/2 flex justify-center flex-col gap-5 text-center lg:text-left"
+      >
         <!-- Highlighted Tagline -->
         <p class="text-lg font-bold text-orange-600">
           BEST DESTINATIONS AROUND THE WORLD
         </p>
 
         <!-- Main Heading -->
-        <h1 class="text-7xl font-bold">
-          Travel,enjoy and live a new and full life
+        <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold">
+          Travel, enjoy and live a new and full life
         </h1>
 
         <!-- Description Paragraph -->
-        <p class="my-2 text-lg">
+        <p class="text-base sm:text-lg my-2 text-gray-700">
           Built Wicket longer admire do barton vanity itself do in it. Preferred
           to sportsmen it engrossed listening. Park gate sell they west hard for
           the.
         </p>
 
         <!-- CTA Buttons and Play Demo -->
-        <section class="flex items-center gap-10">
+        <section
+          class="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 justify-center lg:justify-start"
+        >
           <!-- 'Find Out More' Button -->
           <button
-            class="p-4 bg-yellow-500 border border-yellow-200 text-white rounded-md"
+            class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 transition text-white font-semibold rounded-md"
           >
             Find out more
           </button>
@@ -76,28 +105,32 @@
           <!-- Play Demo Section -->
           <section class="flex items-center gap-4">
             <!-- Play Button with Round Background -->
-            <section class="relative inline-block">
+            <div class="relative inline-block w-12 h-12">
               <img
                 src="./Assets/round.png"
-                alt="Round image"
-                class="w-30 h-30"
+                alt="Round background"
+                class="w-full h-full"
               />
               <img
                 src="./Assets/Triangle.png"
-                alt="Triangle image"
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 z-10"
+                alt="Play button"
+                class="absolute top-1/2 left-1/2 w-4 h-4 transform -translate-x-1/2 -translate-y-1/2 z-10"
               />
-            </section>
+            </div>
 
             <!-- Play Demo Text -->
-            <p>Play demo</p>
+            <p class="font-medium">Play demo</p>
           </section>
         </section>
       </section>
 
       <!-- === Right Side Content (Image) === -->
-      <section>
-        <img src="Assets/Image.png" alt="image of a girl Travelling" />
+      <section class="w-full lg:w-1/2">
+        <img
+          src="Assets/Image.png"
+          alt="Girl travelling"
+          class="w-full max-w-[500px] lg:max-w-[700px] mx-auto"
+        />
       </section>
     </section>
 
@@ -105,51 +138,45 @@
 
     <section
       aria-label="Categories"
-      class="w-[80%] mx-auto my-10 flex items-center flex-col gap-10"
+      class="w-[80%] mx-auto my-20 flex flex-col gap-10"
     >
-      <section class="flex flex-col gap-4">
-        <p class="text-center font-semibold text-xl text-gray-500">CATEGORY</p>
-        <h2 class="text-center text-5xl font-bold">We Offer Best Services</h2>
+      <!-- Heading -->
+      <section class="flex flex-col gap-4 text-center">
+        <p class="font-semibold text-xl text-gray-500">CATEGORY</p>
+        <h2 class="text-3xl md:text-5xl font-bold">We Offer Best Services</h2>
       </section>
 
+      <!-- Services -->
       <section
         aria-label="Services"
-        class="flex items-center justify-between gap-5 w-full"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
       >
-        <!-- Calculated Weather  -->
-
-        <section
-          class="w-[20%] flex items-center justify-center flex-col gap-4 px-10"
-        >
-          <img src="Assets/Satellite.png" alt="Satellite" class="w-1/2" />
+        <!-- Calculated Weather -->
+        <section class="flex flex-col items-center text-center gap-4 px-6">
+          <img src="Assets/Satellite.png" alt="Satellite" class="w-[30%]" />
           <h3 class="text-md font-bold">Calculated Weather</h3>
           <p>Built wicket longer admire do barton vanity itself do in it</p>
         </section>
 
         <!-- Best Flights -->
-
         <section
-          class="w-[20%] flex items-center justify-center shadow-xl rounded-xl flex-col gap-4 p-10"
+          class="flex flex-col items-center text-center gap-4 px-6 shadow-xl rounded-xl"
         >
-          <img src="Assets/Aeroplane.png" alt="Satellite" class="w-4/5" />
+          <img src="Assets/Aeroplane.png" alt="Aeroplane" class="w-1/2" />
           <h3 class="text-md font-bold">Best Flights</h3>
-          <p>Built wicket longer admire do barton vanity itself do in it</p>
+          <p>Engrossed listening. Park gate sell they west hard for the.</p>
         </section>
 
         <!-- Local Events -->
-        <section
-          class="w-[20%] flex items-center justify-center flex-col gap-4 px-10"
-        >
-          <img src="Assets/Mic.png" alt="Mic" class="w-1/2" />
+        <section class="flex flex-col items-center text-center gap-4 px-6">
+          <img src="Assets/Mic.png" alt="Mic" class="w-[30%]" />
           <h3 class="text-md font-bold">Local Events</h3>
           <p>Built wicket longer admire do barton vanity itself do in it</p>
         </section>
 
         <!-- Customization -->
-        <section
-          class="w-[20%] flex items-center justify-center flex-col gap-4 px-10"
-        >
-          <img src="Assets/Setting.png" alt="Settings" class="w-1/2" />
+        <section class="flex flex-col items-center text-center gap-4 px-6">
+          <img src="Assets/Setting.png" alt="Settings" class="w-[30%]" />
           <h3 class="text-md font-bold">Customization</h3>
           <p>Built wicket longer admire do barton vanity itself do in it</p>
         </section>
@@ -158,132 +185,136 @@
 
     <!-- Destinations Sections   -->
 
-    <section class="w-[80%] mx-auto mt-10 flex items-center flex-col gap-10">
-      <section class="flex flex-col gap-4">
-        <p class="font-semibold text-xl text-center text-gray-500">
-          Top selling
-        </p>
-        <h1 class="text-5xl font-bold font-volkhov">Top Destinations</h1>
+    <section class="w-[80%] mx-auto mt-10 flex flex-col gap-10">
+      <!-- Heading -->
+      <section class="flex flex-col gap-4 text-center">
+        <p class="font-semibold text-xl text-gray-500">Top selling</p>
+        <h1 class="text-3xl md:text-5xl font-bold">Top Destinations</h1>
       </section>
 
-      <section class="flex justify-between w-full my-5">
-        <section class="flex flex-col shadow-xl rounded-xl gap-4 pb-5">
+      <!-- Cards -->
+      <section
+        class="flex flex-col md:flex-row md:flex-wrap md:justify-between items-center gap-8 w-full my-5"
+      >
+        <!-- Card 1 -->
+        <section class="flex flex-col shadow-xl rounded-xl gap-4 pb-5 w-64">
           <img
             src="Assets/destination-1.png"
             alt="Destination 1"
-            class="w-64 rounded-t-xl h-64"
+            class="w-full h-64 object-cover rounded-t-xl"
           />
           <section class="flex justify-between px-2 text-gray-700">
             <p>Rome, Italy</p>
-            <p>$5,42k</p>
+            <p>$5.42k</p>
           </section>
           <p class="px-2 text-gray-700">
-            <span class="inline-block rotate-[45deg]">&#11165; </span>
-            10 Days Trip
+            <span class="inline-block rotate-[45deg]">&#11165;</span> 10 Days
+            Trip
           </p>
         </section>
-        <section class="flex flex-col shadow-xl rounded-xl gap-4 pb-5">
+
+        <!-- Card 2 -->
+        <section class="flex flex-col shadow-xl rounded-xl gap-4 pb-5 w-64">
           <img
             src="Assets/destination-2.jpg"
             alt="Destination 2"
-            class="w-64 rounded-t-xl h-64"
+            class="w-full h-64 object-cover rounded-t-xl"
           />
           <section class="flex justify-between px-2 text-gray-700">
-            <p>London , UK</p>
+            <p>London, UK</p>
             <p>$4.2k</p>
           </section>
           <p class="px-2 text-gray-700">
-            <span class="inline-block rotate-[45deg]">&#11165; </span>
-            12 Days Trip
+            <span class="inline-block rotate-[45deg]">&#11165;</span> 12 Days
+            Trip
           </p>
         </section>
-        <section class="relative">
+
+        <!-- Card 3 with Decoration -->
+        <section class="relative w-64">
           <section
             class="flex flex-col shadow-xl rounded-xl gap-4 pb-5 z-10 relative bg-white"
           >
             <img
               src="Assets/destination-3.png"
               alt="Destination 3"
-              class="w-64 rounded-t-xl h-64"
+              class="w-full h-64 object-cover rounded-t-xl"
             />
             <section class="flex justify-between px-2 text-gray-700">
               <p>Full Europe</p>
               <p>$15k</p>
             </section>
             <p class="px-2 text-gray-700">
-              <span class="inline-block rotate-[45deg]">&#11165; </span>
-              28 Days Trip
+              <span class="inline-block rotate-[45deg]">&#11165;</span> 28 Days
+              Trip
             </p>
           </section>
           <img
             src="Assets/Spring-Decore.png"
-            alt=""
-            class="absolute -right-14 bottom-4 z-0"
+            alt="Spring Decor"
+            class="absolute -right-10 bottom-4 z-0 w-20"
           />
         </section>
       </section>
     </section>
 
     <!-- Book your next Trip   -->
-    <section class="w-[80%] mx-auto flex items-center justify-between gap-10">
-      <!-- Left Side content (Text)   -->
-
-      <section class="flex flex-col gap-10 w-[35%]">
-        <section class="flex flex-col gap-3">
+    <section
+      class="w-[80%] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10"
+    >
+      <!-- Left Side content (Text) -->
+      <section class="flex flex-col gap-10 w-full lg:w-[35%]">
+        <section class="flex flex-col gap-3 text-center lg:text-left">
           <p class="text-lg text-gray-500">Easy and Fast</p>
-
-          <h2 class="text-4xl font-bold">
+          <h2 class="text-3xl md:text-4xl font-bold">
             Book Your Next Trip In 3 Easy Steps
           </h2>
         </section>
 
-        <!-- Choose Destination   -->
-
-        <section class="flex gap-4">
+        <!-- Step 1: Choose Destination -->
+        <section class="flex gap-4 items-start">
           <img
             src="Assets/Choose Destination.png"
             alt="Choose Destination"
-            class="object-scale-down"
+            class="object-scale-down w-12 h-12"
           />
           <section>
-            <h4>Choose Destination</h4>
-            <p>
+            <h4 class="text-gray-700 font-bold">Choose Destination</h4>
+            <p class="text-sm text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
               tortor tempus.
             </p>
           </section>
         </section>
 
-        <!-- Make Payment   -->
-
-        <section class="flex gap-4">
+        <!-- Step 2: Make Payment -->
+        <section class="flex gap-4 items-start">
           <img
             src="Assets/MakePayment.png"
-            alt="Choose Destination"
-            class="object-scale-down"
+            alt="Make Payment"
+            class="object-scale-down w-12 h-12"
           />
           <section>
             <h4 class="text-gray-700 font-bold">Make Payment</h4>
-            <p>
+            <p class="text-sm text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
               tortor tempus.
             </p>
           </section>
         </section>
 
-        <!-- Reach Airport on Selected Date   -->
-
-        <section class="flex gap-4">
+        <!-- Step 3: Reach Airport -->
+        <section class="flex gap-4 items-start">
           <img
             src="Assets/Reach Airport.png"
-            alt="Choose Destination"
-            class="object-scale-down"
+            alt="Reach Airport"
+            class="object-scale-down w-12 h-12"
           />
           <section>
             <h4 class="text-gray-700 font-bold">
               Reach Airport on Selected Dates
             </h4>
-            <p>
+            <p class="text-sm text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
               tortor tempus.
             </p>
@@ -292,45 +323,53 @@
       </section>
 
       <!-- Right Side content (Image) -->
-
-      <section>
-        <img src="Assets/BookYourNextTrip.png" alt="BookYourNextTrip Image" />
+      <section class="w-full lg:w-[55%] flex justify-center">
+        <img
+          src="Assets/BookYourNextTrip.png"
+          alt="Book Your Next Trip"
+          class="w-full max-w-md lg:max-w-full"
+        />
       </section>
     </section>
 
     <!-- Testimonials -->
-    <section class="w-[80%] flex mx-auto justify-between my-10 gap-20">
+    <section
+      class="w-[90%] max-w-7xl mx-auto flex flex-col lg:flex-row justify-between my-10 gap-10 lg:gap-20"
+    >
       <!-- Top Text -->
-      <section class="flex items-start flex-col gap-16">
+      <section class="flex flex-col gap-10 lg:gap-16 lg:w-1/2">
         <!-- Left Side content (Text) -->
         <section class="flex flex-col gap-3">
-          <p class="text-lg font-bold text-gray-500">TESTIMONIALS</p>
-          <h2 class="text-6xl font-bold">What People Say About Us.</h2>
+          <p class="text-sm md:text-base font-bold text-gray-500">
+            TESTIMONIALS
+          </p>
+          <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            What People Say About Us.
+          </h2>
         </section>
 
         <!-- Radio Buttons -->
-
-        <section class="flex justify-center gap-4 mt-6">
+        <section class="flex justify-start gap-3 mt-4">
           <button
             id="Testimonial-0"
-            class="w-4 h-4 bg-gray-300 rounded-full active:bg-black"
+            class="w-3 h-3 md:w-4 md:h-4 bg-gray-300 rounded-full"
             onclick="goToSlide(0)"
           ></button>
           <button
             id="Testimonial-1"
-            class="w-4 h-4 bg-gray-300 rounded-full active:bg-black"
+            class="w-3 h-3 md:w-4 md:h-4 bg-gray-300 rounded-full"
             onclick="goToSlide(1)"
           ></button>
           <button
             id="Testimonial-2"
-            class="w-4 h-4 bg-gray-300 rounded-full active:bg-black"
+            class="w-3 h-3 md:w-4 md:h-4 bg-gray-300 rounded-full"
             onclick="goToSlide(2)"
           ></button>
         </section>
       </section>
 
       <!-- Image Slider -->
-      <div class="relative w-full overflow-hidden rounded-lg">
+      <div class="relative w-full lg:w-[80%] overflow-hidden rounded-lg">
         <!-- Slider Images Wrapper -->
         <div
           id="slider"
@@ -340,17 +379,17 @@
           <img
             src="Assets/Testimonials.png"
             alt="Testimonial 1"
-            class="w-full flex-shrink-0"
+            class="w-full flex-shrink-0 object-cover"
           />
           <img
             src="Assets/Testimonials.png"
             alt="Testimonial 2"
-            class="w-full flex-shrink-0"
+            class="w-full flex-shrink-0 object-cover"
           />
           <img
             src="Assets/Testimonials.png"
             alt="Testimonial 3"
-            class="w-full flex-shrink-0"
+            class="w-full flex-shrink-0 object-cover"
           />
         </div>
       </div>
@@ -358,28 +397,44 @@
 
     <!-- Companies -->
 
-    <section class="w-[80%] flex mx-auto justify-between items-center">
-      <img
-        src="Assets/axon-airlines.png"
-        alt="Axon Airlines"
-        class="object-contain"
-      />
-      <img src="Assets/jetStar.png" alt="JetStar" class="object-contain" />
+    <section class="w-[80%] mx-auto">
+      <div
+        class="flex flex-col sm:flex-row justify-between items-center gap-8 sm:gap-4 flex-wrap"
+      >
+        <img
+          src="Assets/axon-airlines.png"
+          alt="Axon Airlines"
+          class="object-contain w-full sm:w-auto max-w-[120px] md:max-w-[150px]"
+        />
+        <img
+          src="Assets/jetStar.png"
+          alt="JetStar"
+          class="object-contain w-full sm:w-auto max-w-[120px] md:max-w-[150px]"
+        />
 
-      <img
-        src="Assets/Expedia.png"
-        alt="Expedia"
-        class="relative shadow-xl object-contain p-4 rounded-lg"
-      />
+        <img
+          src="Assets/Expedia.png"
+          alt="Expedia"
+          class="object-contain w-full sm:w-auto max-w-[120px] md:max-w-[150px] relative shadow-xl p-4 rounded-lg bg-white"
+        />
 
-      <img src="Assets/Quants.png" alt="Quants" class="object-contain" />
-      <img src="Assets/Alitalia.png" alt="Alitalia" class="object-contain" />
+        <img
+          src="Assets/Quants.png"
+          alt="Quants"
+          class="object-contain w-full sm:w-auto max-w-[120px] md:max-w-[150px]"
+        />
+        <img
+          src="Assets/Alitalia.png"
+          alt="Alitalia"
+          class="object-contain w-full sm:w-auto max-w-[120px] md:max-w-[150px]"
+        />
+      </div>
     </section>
 
     <!-- Subscription of news letter -->
 
     <section
-      class="w-[80%] mx-auto my-10 relative flex justify-center items-center px-4"
+      class="hidden sm:flex w-[80%] mx-auto my-10 relative justify-center items-center px-4"
     >
       <!-- Background Image -->
       <img
@@ -393,7 +448,7 @@
         class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center z-10 gap-8 px-4"
       >
         <p
-          class="text-2xl sm:text-xl md:text-3xl font-bold max-w-3xl text-gray-600"
+          class="text-xl sm:text-xl md:text-3xl font-bold max-w-3xl text-gray-600"
         >
           Subscribe to get information, latest news and other interesting offers
           about Jadoo
@@ -404,10 +459,10 @@
           <input
             type="text"
             placeholder="Your Email"
-            class="rounded-lg p-4 pl-6 text-black w-full sm:w-[60%] flex-1"
+            class="rounded-lg p-0 sm:p-4 pl-6 text-black w-full sm:w-[60%] flex-1"
           />
           <button
-            class="bg-orange-500 text-white font-bold px-6 py-4 rounded-lg w-full sm:w-auto"
+            class="bg-orange-500 text-white font-bold px-1 md:px-6 rounded-lg w-full sm:w-auto"
           >
             Subscribe
           </button>
@@ -418,7 +473,7 @@
       <img
         src="Assets/ArowImage.png"
         alt="Arrow"
-        class="absolute right-2 top-2 sm:-top-4 sm:-right-4 w-10 sm:w-auto z-20"
+        class="absolute right-2 top-2 sm:-top-4 sm:-right-4 w-8 sm:w-12 md:w-auto z-20"
       />
     </section>
 
