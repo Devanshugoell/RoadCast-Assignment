@@ -8,6 +8,4 @@ Follow the steps below to run this project on your local machine:
 
 2. **Navigate to the Project Directory**
 
-cd roadcast-assignment
-
 3. **Open index.html in Browser**
