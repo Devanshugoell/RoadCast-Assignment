@@ -1,5 +1,8 @@
-const toggleBtn = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
+const menuIcon = document.getElementById("menu-icon");
+const closeIcon = document.getElementById("close-icon");
+
+//Image Slider
 
 let currentSlide = 0;
 const totalSlides = 3;
@@ -30,6 +33,10 @@ setInterval(() => {
   goToSlide(currentSlide);
 }, 1500);
 
-toggleBtn.addEventListener("click", () => {
+// Toggle navbar
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
   navLinks.classList.toggle("hidden");
+  menuIcon.classList.toggle("hidden");
+  closeIcon.classList.toggle("hidden");
 });

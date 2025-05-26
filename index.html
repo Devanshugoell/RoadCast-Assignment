@@ -4,15 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Fonts   -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -30,9 +21,17 @@
         <!-- Hamburger Menu for Mobile -->
         <button id="menu-toggle" class="lg:hidden block focus:outline-none">
           <img
+            id="menu-icon"
             src="Assets/HamburgerMenu.png"
-            alt="HamburgerMenu"
-            class="w-6 h-6"
+            alt="Menu"
+            class="w-6 h-6 block"
+          />
+
+          <img
+            id="close-icon"
+            src="Assets/CrossIcon.png"
+            alt="Close Menu"
+            class="w-6 h-6 hidden"
           />
         </button>
 
@@ -41,17 +40,17 @@
           id="nav-links"
           class="hidden lg:flex flex-col lg:flex-row items-center gap-6 lg:gap-8 xl:gap-16 py-6 lg:py-0 text-center absolute lg:static top-full right-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none px-4 lg:px-0 z-50"
         >
-          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">
+          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
             Destinations
           </li>
-          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">Hotel</li>
-          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">
+          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">Hotel</li>
+          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
             Flights
           </li>
-          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">
+          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
             Booking
           </li>
-          <li class="cursor-pointer hover:text-gray-600 py-6 md:py-0">Login</li>
+          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">Login</li>
           <button
             class="border border-black rounded-[5px] text-sm py-1 px-2 lg:ml-4 hover:bg-black hover:text-white transition-colors"
           >
@@ -70,11 +69,10 @@
     <section
       class="w-[80%] mx-auto my-9 flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
     >
-      <!-- === Left Side Content (Text) === -->
+      <!--  Left Side Content (Text) -->
       <section
         class="w-full lg:w-1/2 flex justify-center flex-col gap-5 text-center lg:text-left"
       >
-        <!-- Highlighted Tagline -->
         <p class="text-lg font-bold text-orange-600">
           BEST DESTINATIONS AROUND THE WORLD
         </p>
@@ -84,27 +82,23 @@
           Travel, enjoy and live a new and full life
         </h1>
 
-        <!-- Description Paragraph -->
+        <!-- Description  -->
         <p class="text-base sm:text-lg my-2 text-gray-700">
           Built Wicket longer admire do barton vanity itself do in it. Preferred
           to sportsmen it engrossed listening. Park gate sell they west hard for
           the.
         </p>
 
-        <!-- CTA Buttons and Play Demo -->
         <section
           class="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 justify-center lg:justify-start"
         >
-          <!-- 'Find Out More' Button -->
           <button
             class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 transition text-white font-semibold rounded-md"
           >
             Find out more
           </button>
 
-          <!-- Play Demo Section -->
           <section class="flex items-center gap-4">
-            <!-- Play Button with Round Background -->
             <div class="relative inline-block w-12 h-12">
               <img
                 src="./Assets/round.png"
@@ -118,13 +112,12 @@
               />
             </div>
 
-            <!-- Play Demo Text -->
             <p class="font-medium">Play demo</p>
           </section>
         </section>
       </section>
 
-      <!-- === Right Side Content (Image) === -->
+      <!--  Right Side Content  -->
       <section class="w-full lg:w-1/2">
         <img
           src="Assets/Image.png"
@@ -230,7 +223,7 @@
           </p>
         </section>
 
-        <!-- Card 3 with Decoration -->
+        <!-- Card 3  -->
         <section class="relative w-64">
           <section
             class="flex flex-col shadow-xl rounded-xl gap-4 pb-5 z-10 relative bg-white"
@@ -262,7 +255,7 @@
     <section
       class="w-[80%] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10"
     >
-      <!-- Left Side content (Text) -->
+      <!-- Left Side content  -->
       <section class="flex flex-col gap-10 w-full lg:w-[35%]">
         <section class="flex flex-col gap-3 text-center lg:text-left">
           <p class="text-lg text-gray-500">Easy and Fast</p>
@@ -271,7 +264,7 @@
           </h2>
         </section>
 
-        <!-- Step 1: Choose Destination -->
+        <!-- Choose Destination -->
         <section class="flex gap-4 items-start">
           <img
             src="Assets/Choose Destination.png"
@@ -287,7 +280,7 @@
           </section>
         </section>
 
-        <!-- Step 2: Make Payment -->
+        <!--  Make Payment -->
         <section class="flex gap-4 items-start">
           <img
             src="Assets/MakePayment.png"
@@ -303,7 +296,7 @@
           </section>
         </section>
 
-        <!-- Step 3: Reach Airport -->
+        <!--  Reach Airport -->
         <section class="flex gap-4 items-start">
           <img
             src="Assets/Reach Airport.png"
@@ -322,7 +315,7 @@
         </section>
       </section>
 
-      <!-- Right Side content (Image) -->
+      <!-- Right Side content  -->
       <section class="w-full lg:w-[55%] flex justify-center">
         <img
           src="Assets/BookYourNextTrip.png"
@@ -336,9 +329,8 @@
     <section
       class="w-[90%] max-w-7xl mx-auto flex flex-col lg:flex-row justify-between my-10 gap-10 lg:gap-20"
     >
-      <!-- Top Text -->
       <section class="flex flex-col gap-10 lg:gap-16 lg:w-1/2">
-        <!-- Left Side content (Text) -->
+        <!-- Left Side content  -->
         <section class="flex flex-col gap-3">
           <p class="text-sm md:text-base font-bold text-gray-500">
             TESTIMONIALS
@@ -370,7 +362,6 @@
 
       <!-- Image Slider -->
       <div class="relative w-full lg:w-[80%] overflow-hidden rounded-lg">
-        <!-- Slider Images Wrapper -->
         <div
           id="slider"
           class="flex transition-transform duration-500 ease-in-out"
@@ -448,7 +439,7 @@
         class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center z-10 gap-8 px-4"
       >
         <p
-          class="text-xl sm:text-xl md:text-3xl font-bold max-w-3xl text-gray-600"
+          class="text-sm sm:text-xl md:text-3xl font-bold max-w-3xl text-gray-600"
         >
           Subscribe to get information, latest news and other interesting offers
           about Jadoo
@@ -480,7 +471,6 @@
     <!-- Footer  -->
 
     <footer class="w-[80%] mx-auto px-4">
-      <!-- Main section -->
       <section
         class="flex flex-col gap-12 md:flex-row md:justify-between my-20"
       >
@@ -530,7 +520,6 @@
 
           <p class="text-lg text-gray-600 font-semibold">Discover our app</p>
 
-          <!-- Store Buttons -->
           <section class="flex flex-col sm:flex-row gap-4">
             <!-- Google Play -->
             <section
