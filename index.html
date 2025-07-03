@@ -8,121 +8,132 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>RoadCast Assignment</title>
+    <style>
+      .container {
+        max-width: 1280px !important;
+      }
+    </style>
   </head>
-  <body>
-    <!-- Header  -->
-    <header class="w-[80%] mx-auto">
-      <nav class="flex my-10 items-center justify-between relative">
-        <!-- Logo -->
-        <a href="/">
-          <img src="Assets/Logo.png" alt="Logo of Website" />
-        </a>
+  <body class="bg-[url(/Assets/Decore.png)] bg-right-top bg-no-repeat">
+    <section>
+      <!-- Header  -->
+      <header class="container mx-auto">
+        <nav class="flex mb-10 items-center justify-between relative">
+          <!-- Logo -->
+          <a href="/">
+            <img src="Assets/Logo.png" alt="Logo of Website" />
+          </a>
 
-        <!-- Hamburger Menu for Mobile -->
-        <button id="menu-toggle" class="lg:hidden block focus:outline-none">
-          <img
-            id="menu-icon"
-            src="Assets/HamburgerMenu.png"
-            alt="Menu"
-            class="w-6 h-6 block"
-          />
-          <img
-            id="close-icon"
-            src="Assets/CrossIcon.png"
-            alt="Close Menu"
-            class="w-6 h-6 hidden"
-          />
-        </button>
-
-        <!-- Navigation Links -->
-        <ul
-          id="nav-links"
-          class="hidden lg:flex flex-col lg:flex-row items-center gap-6 lg:gap-8 xl:gap-16 py-6 lg:py-0 text-center absolute lg:static top-full right-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none px-4 lg:px-0 z-50"
-        >
-          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
-            Destinations
-          </li>
-          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">Hotel</li>
-          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
-            Flights
-          </li>
-          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
-            Booking
-          </li>
-          <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">Login</li>
-          <button
-            class="border border-black rounded-[5px] text-sm py-1 px-2 lg:ml-4 hover:bg-black hover:text-white transition-colors"
-          >
-            Sign Up
+          <!-- Hamburger Menu for Mobile -->
+          <button id="menu-toggle" class="lg:hidden block focus:outline-none">
+            <img
+              id="menu-icon"
+              src="Assets/HamburgerMenu.png"
+              alt="Menu"
+              class="w-6 h-6 block"
+            />
+            <img
+              id="close-icon"
+              src="Assets/CrossIcon.png"
+              alt="Close Menu"
+              class="w-6 h-6 hidden"
+            />
           </button>
-          <select name="language" class="bg-transparent focus:outline-none">
-            <option value="eng">EN</option>
-            <option value="japnese">JAP</option>
-          </select>
-        </ul>
-      </nav>
-    </header>
 
-    <!-- Hero section   -->
+          <!-- Navigation Links -->
+          <ul
+            id="nav-links"
+            class="hidden lg:flex flex-col lg:flex-row items-center gap-6 lg:gap-8 xl:gap-16 py-6 lg:py-0 text-center absolute lg:static top-full right-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none px-4 lg:px-0 z-50"
+          >
+            <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
+              Destinations
+            </li>
+            <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
+              Hotel
+            </li>
+            <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
+              Flights
+            </li>
+            <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
+              Booking
+            </li>
+            <li class="cursor-pointer hover:text-gray-600 py-6 lg:py-0">
+              Login
+            </li>
+            <button
+              class="border border-black rounded-[5px] text-sm py-1 px-2 lg:ml-4 hover:bg-black hover:text-white transition-colors"
+            >
+              Sign Up
+            </button>
+            <select name="language" class="bg-transparent focus:outline-none">
+              <option value="eng">EN</option>
+              <option value="japnese">JAP</option>
+            </select>
+          </ul>
+        </nav>
+      </header>
 
-    <section
-      class="w-[80%] mx-auto my-9 flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
-    >
-      <!--  Left Side Content (Text) -->
+      <!-- Hero section   -->
+
       <section
-        class="w-full lg:w-1/2 flex justify-center flex-col gap-5 text-center lg:text-left"
+        class="container mx-auto my-9 flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
       >
-        <p class="text-lg font-bold text-orange-600">
-          BEST DESTINATIONS AROUND THE WORLD
-        </p>
-
-        <!-- Main Heading -->
-        <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold">
-          Travel, enjoy and live a new and full life
-        </h1>
-
-        <!-- Description  -->
-        <p class="text-base sm:text-lg my-2 text-gray-700">
-          Built Wicket longer admire do barton vanity itself do in it. Preferred
-          to sportsmen it engrossed listening. Park gate sell they west hard for
-          the.
-        </p>
-
+        <!--  Left Side Content (Text) -->
         <section
-          class="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 justify-center lg:justify-start"
+          class="w-full lg:w-1/2 flex justify-center flex-col gap-5 text-center lg:text-left"
         >
-          <button
-            class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 transition text-white font-semibold rounded-md"
+          <p class="text-lg font-bold text-orange-600">
+            BEST DESTINATIONS AROUND THE WORLD
+          </p>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold">
+            Travel, enjoy and live a new and full life
+          </h1>
+
+          <!-- Description  -->
+          <p class="text-base sm:text-lg my-2 text-gray-700">
+            Built Wicket longer admire do barton vanity itself do in it.
+            Preferred to sportsmen it engrossed listening. Park gate sell they
+            west hard for the.
+          </p>
+
+          <section
+            class="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 justify-center lg:justify-start"
           >
-            Find out more
-          </button>
+            <button
+              class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 transition text-white font-semibold rounded-md"
+            >
+              Find out more
+            </button>
 
-          <section class="flex items-center gap-4">
-            <div class="relative inline-block w-12 h-12">
-              <img
-                src="./Assets/round.png"
-                alt="Round background"
-                class="w-full h-full"
-              />
-              <img
-                src="./Assets/Triangle.png"
-                alt="Play button"
-                class="absolute top-1/2 left-1/2 w-4 h-4 transform -translate-x-1/2 -translate-y-1/2 z-10"
-              />
-            </div>
+            <section class="flex items-center gap-4">
+              <div class="relative inline-block w-12 h-12">
+                <img
+                  src="./Assets/round.png"
+                  alt="Round background"
+                  class="w-full h-full"
+                />
+                <img
+                  src="./Assets/Triangle.png"
+                  alt="Play button"
+                  class="absolute top-1/2 left-1/2 w-4 h-4 transform -translate-x-1/2 -translate-y-1/2 z-10"
+                />
+              </div>
 
-            <p class="font-medium">Play demo</p>
+              <p class="font-medium">Play demo</p>
+            </section>
           </section>
         </section>
-      </section>
 
-      <!--  Right Side Content  -->
-      <section class="w-full lg:w-1/2">
-        <img
-          src="Assets/Image.png"
-          alt="Girl travelling"
-          class="w-full max-w-[500px] lg:max-w-[700px] mx-auto"
-        />
+        <!--  Right Side Content  -->
+        <section class="w-full lg:w-1/2">
+          <img
+            src="Assets/Image.png"
+            alt="Girl travelling"
+            class="w-full max-w-[500px] lg:max-w-[700px] mx-auto"
+          />
+        </section>
       </section>
     </section>
 
@@ -130,7 +141,7 @@
 
     <section
       aria-label="Categories"
-      class="w-[80%] mx-auto my-20 flex flex-col gap-10"
+      class="container mx-auto my-20 flex flex-col gap-10"
     >
       <!-- Heading -->
       <section class="flex w-full justify-end items-center">
@@ -145,7 +156,7 @@
       <!-- Services -->
       <section
         aria-label="Services"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-[90%] m-auto"
       >
         <!-- Calculated Weather -->
         <section class="flex flex-col items-center text-center gap-4 px-6">
@@ -156,7 +167,7 @@
 
         <!-- Best Flights -->
         <section
-          class="flex flex-col items-center text-center gap-4 px-6 shadow-xl rounded-xl"
+          class="flex flex-col items-center text-center gap-4 px-8 py-3 shadow-xl rounded-xl"
         >
           <img src="Assets/Aeroplane.png" alt="Aeroplane" class="w-1/2" />
           <h3 class="text-md font-bold">Best Flights</h3>
@@ -181,7 +192,7 @@
 
     <!-- Destinations Sections   -->
 
-    <section class="w-[80%] mx-auto mt-10 flex flex-col gap-10">
+    <section class="container mx-auto mt-10 flex flex-col gap-10">
       <!-- Heading -->
       <section class="flex flex-col gap-4 text-center">
         <p class="font-semibold text-xl text-gray-500">Top selling</p>
@@ -190,10 +201,10 @@
 
       <!-- Cards -->
       <section
-        class="flex flex-col md:flex-row md:flex-wrap md:justify-between items-center gap-8 w-full my-5"
+        class="flex flex-col md:flex-row md:flex-wrap md:justify-between items-center my-5"
       >
         <!-- Card 1 -->
-        <section class="flex flex-col shadow-xl rounded-xl gap-4 pb-5 w-64">
+        <section class="flex flex-col shadow-xl rounded-xl gap-4 pb-5">
           <img
             src="Assets/destination-1.png"
             alt="Destination 1"
@@ -210,7 +221,7 @@
         </section>
 
         <!-- Card 2 -->
-        <section class="flex flex-col shadow-xl rounded-xl gap-4 pb-5 w-64">
+        <section class="flex flex-col shadow-xl rounded-xl gap-4 pb-5">
           <img
             src="Assets/destination-2.jpg"
             alt="Destination 2"
@@ -227,7 +238,7 @@
         </section>
 
         <!-- Card 3  -->
-        <section class="relative w-64">
+        <section class="relative">
           <section
             class="flex flex-col shadow-xl rounded-xl gap-4 pb-5 z-10 relative bg-white"
           >
@@ -256,7 +267,7 @@
 
     <!-- Book your next Trip   -->
     <section
-      class="w-[80%] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10"
+      class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-10"
     >
       <!-- Left Side content  -->
       <section class="flex flex-col gap-10 w-full lg:w-[35%]">
@@ -364,7 +375,7 @@
       </section>
 
       <!-- Image Slider -->
-      <div class="relative w-full lg:w-[80%] overflow-hidden rounded-lg">
+      <div class="relative w-full lg:container overflow-hidden rounded-lg">
         <div
           id="slider"
           class="flex transition-transform duration-500 ease-in-out"
@@ -391,7 +402,7 @@
 
     <!-- Companies -->
 
-    <section class="w-[80%] mx-auto">
+    <section class="container mx-auto">
       <div
         class="flex flex-col sm:flex-row justify-between items-center gap-8 sm:gap-4 flex-wrap"
       >
@@ -428,7 +439,7 @@
     <!-- Subscription of news letter -->
 
     <section
-      class="hidden sm:flex w-[80%] mx-auto my-10 relative justify-center items-center px-4"
+      class="hidden sm:flex container mx-auto my-10 relative justify-center items-center px-4"
     >
       <!-- Background Image -->
       <img
@@ -473,7 +484,7 @@
 
     <!-- Footer  -->
 
-    <footer class="w-[80%] mx-auto px-4">
+    <footer class="container mx-auto px-4">
       <section
         class="flex flex-col gap-12 md:flex-row md:justify-between my-20"
       >
